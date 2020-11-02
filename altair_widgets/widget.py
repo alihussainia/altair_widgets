@@ -1,26 +1,9 @@
-from subprocess import call
-
-call("jupyter nbextension enable --py --sys-prefix widgetsnbextension", shell=True)
-call("jupyter nbextension enable --py --sys-prefix vega", shell=True)
-call("pip install altair_saver", shell=True)
-call("pip install jupyter pandas vega", shell=True)
-call("pip install --upgrade notebook", shell=True)
-call("jupyter nbextension install --sys-prefix --py vega", shell=True)
-call("apt-get update", shell=True)
-call("apt-get -qq install chromium-chromedriver", shell=True)
-
 import altair
 import ipywidgets as widgets
-from ipywidgets import HBox, VBox
 from ipywidgets import Layout
 from IPython.display import display, clear_output, display_pretty, HTML, Image, SVG
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 import io
-from IPython.display import display
-from IPython import get_ipython
-get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 def interact_with(df, ndims=3, **kwargs):
