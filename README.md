@@ -36,9 +36,6 @@ $ jupyter nbextension enable --py --sys-prefix widgetsnbextension
 $ jupyter nbextension enable --py --sys-prefix vega
 ```
 
-altair_widgets will not work with Google Colab as Colab does not support ipywidgets.
-To track ipywidgets support on Google Colab, see https://github.com/googlecolab/colabtools/issues/60.
-
 ## Google Colab
 
 These commands allow widgets to work on Google CoLab:
@@ -53,6 +50,14 @@ jupyter nbextension install --sys-prefix --py vega
 apt-get update
 apt-get -qq install chromium-chromedriver
 ```
+
+Here are the issues tracking `ipywidgets` support on Google Colab:
+
+* [googlecolab/colabtools#60][60], "Add Ipywidgets support."
+* [googlecolab/colabtools#498][498], "Support installation of custom widgets"
+
+[60]:https://github.com/googlecolab/colabtools/issues/60
+[498]:https://github.com/googlecolab/colabtools/issues/498
 
 
 [Altair]:https://altair-viz.github.io
